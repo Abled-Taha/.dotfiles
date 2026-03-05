@@ -49,11 +49,11 @@ in
     # };
     # extensions = [ pkgs.gh-s ]; # example extension
   };
-  
+  services.ssh-agent.enable = true;
+ 
   xdg.configFile = builtins.mapAttrs (name: subpath: {
     source = create_symlink "${dotfiles}/${subpath}";
   }) configs;
-  home.file.".config/nvim".source = ./config/nvim;
 
   home.packages = with pkgs; [
     neovim
