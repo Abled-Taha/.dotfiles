@@ -13,18 +13,21 @@
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
+  networking.firewall.checkReversePath = "loose";
 
   time.timeZone = "Asia/Karachi";
 
   programs.hyprland.enable = true;
+  programs.adb.enable = true;
   services.displayManager.ly.enable = true;
   services.devmon.enable = true;
   services.gvfs.enable = true;
   services.udisks2.enable = true;
+  services.gnome.gnome-keyring.enable = true;
 
   users.users.abledtaha = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "adbUsers" "input" "networkmanager" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       tree
     ];
@@ -44,6 +47,7 @@
     nerd-fonts.jetbrains-mono
   ];
 
+  nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   system.stateVersion = "25.11";

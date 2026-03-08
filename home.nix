@@ -5,6 +5,7 @@ let
   configs = {
     hypr = "hypr";
     rofi = "rofi";
+    kitty = "kitty";
   };
 in
 {
@@ -20,6 +21,7 @@ in
       flake = "vim /home/abledtaha/.dotfiles/flake.nix";
       switch = "sudo nixos-rebuild switch --flake /home/abledtaha/.dotfiles/";
       update = "nix flake update";
+      scrcpy = "scrcpy --render-driver=opengl -m1024";
     };
   };
   programs.git = {
@@ -34,6 +36,7 @@ in
         s = "status";
         l = "log --oneline";
       };
+      credential.helper = "cache";
     };
     ignores = [
       ".swp"
@@ -63,5 +66,18 @@ in
     nodejs
     gcc
     zen-browser.packages."${system}".default
+    android-tools
+    scrcpy
+    kdePackages.dolphin
+    gedit
+    btop
+    flameshot
+    ranger
+    vlc
+    transmission_4
+    tor-browser
+    vscode
+    protonvpn-gui
+    wireguard-tools
   ];
 }
