@@ -58,6 +58,15 @@ in
     source = create_symlink "${dotfiles}/${subpath}";
   }) configs;
 
+  home.pointerCursor = {
+    package = pkgs.adwaita-icon-theme;
+    name = "Adwaita";
+    size = 24; # Adjust size as needed
+    gtk.enable = true;
+    x11.enable = true;
+  };
+
+
   home.packages = with pkgs; [
     neovim
     ripgrep
@@ -74,10 +83,16 @@ in
     flameshot
     ranger
     vlc
-    transmission_4
+    transmission_4-gtk
     tor-browser
     vscode
     protonvpn-gui
     wireguard-tools
+    lutris
+    wineWowPackages.stable
+    winetricks
+    adwaita-icon-theme
+    protonup-qt
+    lmstudio
   ];
 }

@@ -17,6 +17,8 @@
 
   time.timeZone = "Asia/Karachi";
 
+  hardware.graphics.enable32Bit = true;
+
   programs.hyprland.enable = true;
   programs.adb.enable = true;
   services.displayManager.ly.enable = true;
@@ -24,6 +26,7 @@
   services.gvfs.enable = true;
   services.udisks2.enable = true;
   services.gnome.gnome-keyring.enable = true;
+  virtualisation.waydroid.enable = true;
 
   users.users.abledtaha = {
     isNormalUser = true;
