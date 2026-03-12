@@ -27,6 +27,20 @@
   services.udisks2.enable = true;
   services.gnome.gnome-keyring.enable = true;
   virtualisation.waydroid.enable = true;
+  virtualisation.podman.enable = true;
+  services.transmission = {
+    enable = true;
+    openFirewall = true; # Opens port 51413
+    settings = {
+      download-dir = "/home/abledtaha/Downloads"; # Ensure this directory exists
+      rpc-bind-address = "127.0.0.1";
+      rpc-whitelist = "127.0.0.1";
+      # If using web-ui with authentication:
+      # rpc-authentication-required = true;
+      # rpc-username = "user";
+      # rpc-password = "password";
+    };
+  };
 
   users.users.abledtaha = {
     isNormalUser = true;

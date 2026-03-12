@@ -94,5 +94,7 @@ in
     adwaita-icon-theme
     protonup-qt
     lmstudio
+    remmina
+    distrobox
   ];
 }
