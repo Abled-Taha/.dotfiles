@@ -16,7 +16,7 @@ in
     enable = true;
     shellAliases = {
       btw = "echo I use nixos, btw";
-      ls = "ls -la";
+      ll = "ls -la";
       config = "vim /home/abledtaha/.dotfiles/configuration.nix";
       home = "vim /home/abledtaha/.dotfiles/home.nix";
       flake = "vim /home/abledtaha/.dotfiles/flake.nix";
