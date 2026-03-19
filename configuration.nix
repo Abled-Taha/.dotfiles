@@ -18,6 +18,8 @@
   time.timeZone = "Asia/Karachi";
 
   hardware.graphics.enable32Bit = true;
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
 
   programs.hyprland.enable = true;
   programs.adb.enable = true;
@@ -26,20 +28,17 @@
   services.gvfs.enable = true;
   services.udisks2.enable = true;
   services.gnome.gnome-keyring.enable = true;
+  services.blueman.enable = true;
   virtualisation.waydroid.enable = true;
   virtualisation.podman.enable = true;
-  services.transmission = {
+  security.rtkit.enable = true;
+  services.pipewire = {
     enable = true;
-    openFirewall = true; # Opens port 51413
-    settings = {
-      download-dir = "/home/abledtaha/Downloads"; # Ensure this directory exists
-      rpc-bind-address = "127.0.0.1";
-      rpc-whitelist = "127.0.0.1";
-      # If using web-ui with authentication:
-      # rpc-authentication-required = true;
-      # rpc-username = "user";
-      # rpc-password = "password";
-    };
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
+    wireplumber.enable = true;
   };
 
   users.users.abledtaha = {
@@ -58,11 +57,20 @@
     rofi
     chromium
     wl-clipboard
+    pavucontrol
+    ffmpeg-full
+    pulseaudio
   ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
   ];
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+    config.common.default = "*";
+  };
 
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
