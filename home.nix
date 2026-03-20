@@ -135,5 +135,6 @@ in
     steam-run
     steam
     gimp
+    prismlauncher
   ];
 }
