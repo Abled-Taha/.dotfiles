@@ -108,7 +108,6 @@ in
     ripgrep
     nil
     nixpkgs-fmt
-    nodejs
     gcc
     zen-browser.packages."${system}".default
     android-tools
@@ -116,7 +115,6 @@ in
     kdePackages.dolphin
     gedit
     btop
-    ranger
     vlc
     qbittorrent
     tor-browser
@@ -128,13 +126,17 @@ in
     winetricks
     adwaita-icon-theme
     protonup-qt
-    lmstudio
     remmina
-    distrobox
     obsidian
     steam-run
     steam
     gimp
     prismlauncher
+    gst_all_1.gstreamer
+    gst_all_1.gst-plugins-base
+    gst_all_1.gst-plugins-good
+    gst_all_1.gst-plugins-bad
+    gst_all_1.gst-plugins-ugly
+    gst_all_1.gst-libav
   ];
 }

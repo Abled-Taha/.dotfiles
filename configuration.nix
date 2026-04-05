@@ -14,6 +14,7 @@
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
   networking.firewall.checkReversePath = "loose";
+  networking.networkmanager.connectionConfig."ipv4.dhcp-client-id" = "mac";
 
   time.timeZone = "Asia/Karachi";
 
@@ -29,7 +30,8 @@
   services.udisks2.enable = true;
   services.gnome.gnome-keyring.enable = true;
   services.blueman.enable = true;
-  virtualisation.waydroid.enable = true;
+  services.flatpak.enable = true;
+  virtualisation.waydroid.enable = false;
   virtualisation.podman.enable = true;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -40,6 +42,28 @@
     jack.enable = true;
     wireplumber.enable = true;
   };
+  services.samba = {
+    enable = false;
+    openFirewall = true;
+    settings = {
+      global = {
+        "workgroup" = "WORKGROUP";
+        "server string" = "smbnix";
+        "netbios name" = "smbnix";
+        "security" = "user";
+      };
+      # Define your share
+      "publicshare" = {
+        "path" = "/home/abledtaha/shared/";
+        "browseable" = "yes";
+        "read only" = "no";
+        "guest ok" = "no";
+        "create mask" = "0644";
+        "directory mask" = "0755";
+      };
+    };
+  };
+
 
   users.users.abledtaha = {
     isNormalUser = true;
@@ -60,6 +84,24 @@
     pavucontrol
     ffmpeg-full
     pulseaudio
+  ];
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    zlib
+    zstd
+    stdenv.cc.cc
+    curl
+    openssl
+    attr
+    libssh
+    bzip2
+    libxml2
+    acl
+    libsodium
+    util-linux
+    xz
+    systemd
   ];
 
   fonts.packages = with pkgs; [
