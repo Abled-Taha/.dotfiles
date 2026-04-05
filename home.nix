@@ -24,6 +24,8 @@ in
       update = "nix flake update";
       scrcpy = "scrcpy --render-driver=opengl -m1024";
       dualaudio = "pactl load-module module-combine-sink sink_name=combined slaves=alsa_output.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.analog-stereo,alsa_output.pci-0000_00_1b.0.analog-stereo";
+      projects = "cd /home/abledtaha/Documents/Projects/";
+      dotfiles = "cd /home/abledtaha/.dotfiles/";
     };
   };
   programs.git = {
@@ -37,6 +39,9 @@ in
       alias = {
         s = "status";
         l = "log --oneline";
+        a = "add --all";
+        c = "commit -m 'Regular Commit'";
+        p = "push";
       };
       credential.helper = "cache";
     };
