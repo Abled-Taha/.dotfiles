@@ -24,6 +24,8 @@
 
   programs.hyprland.enable = true;
   programs.adb.enable = true;
+  programs.ydotool.enable = true;
+
   services.displayManager.ly.enable = true;
   services.devmon.enable = true;
   services.gvfs.enable = true;
@@ -34,6 +36,7 @@
   virtualisation.waydroid.enable = false;
   virtualisation.podman.enable = true;
   security.rtkit.enable = true;
+  services.ollama.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -67,7 +70,7 @@
 
   users.users.abledtaha = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "adbUsers" "input" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "adbUsers" "input" "networkmanager" "ydotool" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       tree
     ];
@@ -84,6 +87,7 @@
     pavucontrol
     ffmpeg-full
     pulseaudio
+    usbutils
   ];
 
   programs.nix-ld.enable = true;

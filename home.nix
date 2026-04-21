@@ -26,6 +26,8 @@ in
       dualaudio = "pactl load-module module-combine-sink sink_name=combined slaves=alsa_output.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.analog-stereo,alsa_output.pci-0000_00_1b.0.analog-stereo";
       projects = "cd /home/abledtaha/Documents/Projects/";
       dotfiles = "cd /home/abledtaha/.dotfiles/";
+      clicker = "pkill -f clicker.sh || /home/abledtaha/.dotfiles/scripts/clicker.sh";
+      ai = "ollama run hf.co/mradermacher/Qwen2.5-7B-Instruct-Uncensored-GGUF:Q4_K_M";
     };
   };
   programs.git = {
@@ -143,5 +145,8 @@ in
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-ugly
     gst_all_1.gst-libav
+    nautilus
+    kdePackages.kdenlive
+    audacity
   ];
 }
