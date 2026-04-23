@@ -5,7 +5,18 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
+# Colors
+C_BLUE='\[\033[01;34m\]'
+C_GREEN='\[\033[01;32m\]'
+C_CYAN='\[\033[01;36m\]'
+C_RESET='\[\033[00m\]'
+
+# Prompt
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+PS1="${C_CYAN}[${C_GREEN}\u${C_CYAN}@\h] ${C_BLUE}\w${C_CYAN}\$(parse_git_branch)${C_RESET}\$> "
 
 # Aliases
 alias ls='ls --color=auto -la'

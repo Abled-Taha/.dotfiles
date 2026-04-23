@@ -1,0 +1,5 @@
+include "%L" # Load system defaults (like accented letters)
+
+# Format: <Compose> <key1> <key2> : "Result"
+<Multi_key> <e> <l> : "❤️" # Heart
+<Multi_key> <e> <f> : "🔥" # Fire
