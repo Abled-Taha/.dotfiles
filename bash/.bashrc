@@ -1,7 +1,3 @@
-#
-# ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -18,10 +14,12 @@ parse_git_branch() {
 
 PS1="${C_CYAN}[${C_GREEN}\u${C_CYAN}@\h] ${C_BLUE}\w${C_CYAN}\$(parse_git_branch)${C_RESET}\$> "
 
+
+
 # Aliases
 alias ls='ls --color=auto -la'
 alias grep='grep --color=auto'
-alias source='source ~/.bashrc'
+alias reload='source ~/.bashrc'
 
 
 
@@ -42,5 +40,28 @@ git() {
     git p
   else
     command git "$@"
+  fi
+}
+
+cd() {
+  local storage="/run/media/abledtaha/Storage/"
+  if [ "$1" == "dot" ]; then
+    builtin cd ~/.dotfiles/
+  elif [ "$1" == "projects" ]; then
+    builtin cd "${storage}Documents/Projects/"
+  elif [ "$1" == "notes" ]; then
+    builtin cd "${storage}Documents/Obsidian/"
+  else
+    builtin cd "$@"
+  fi
+}
+
+vim() {
+  if [ "$1" == "bashrc" ]; then
+    command vim ~/.bashrc
+  elif [ "$1" == "hyprland" ]; then
+    command vim ~/.config/hypr/hyprland.conf
+  else
+    command vim "$@"
   fi
 }
