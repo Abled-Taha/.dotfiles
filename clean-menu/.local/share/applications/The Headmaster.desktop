@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=The Headmaster
+Exec=xdg-open heroic://launch?appName=46VXg6D3T4vraRasDz8bCt&runner=sideload
+Terminal=false
+Type=Application
+Icon=/home/abledtaha/.var/app/com.heroicgameslauncher.hgl/config/heroic/icons/46VXg6D3T4vraRasDz8bCt.jpg
+Categories=Game;

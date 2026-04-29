@@ -21,6 +21,9 @@ alias ls='ls --color=auto -la'
 alias grep='grep --color=auto'
 alias reload='source ~/.bashrc'
 
+# Hooks
+eval "$(mise activate bash)" # Mise
+
 
 
 # Custom Functions
@@ -63,5 +66,13 @@ vim() {
     command vim ~/.config/hypr/hyprland.conf
   else
     command vim "$@"
+  fi
+}
+
+ssh() {
+  if [ "$1" == "oracle" ]; then
+    command ssh ubuntu@abled.minecraftr.us
+  else
+    command ssh "$@"
   fi
 }

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=What a Legend
+Exec=xdg-open heroic://launch?appName=2nAzzSYsGNbcSXbEyMrUBR&runner=sideload
+Terminal=false
+Type=Application
+Icon=/home/abledtaha/.var/app/com.heroicgameslauncher.hgl/config/heroic/icons/2nAzzSYsGNbcSXbEyMrUBR.jpg
+Categories=Game;
