@@ -15,64 +15,25 @@ parse_git_branch() {
 PS1="${C_CYAN}[${C_GREEN}\u${C_CYAN}@\h] ${C_BLUE}\w${C_CYAN}\$(parse_git_branch)${C_RESET}\$> "
 
 
+# Custom Variables
+export STORAGE="/run/media/abledtaha/Storage"
+export projects="$STORAGE/Documents/Projects"
+export notes="$STORAGE/Documents/Obsidian"
+export bashrc="$HOME/.bashrc"
+export dotfiles="$HOME/.dotfiles"
+export hyprland="$dotfiles/hypr/.config/hypr/hyprland.conf"
+export minecraft="$HOME/.local/share/PrismLauncher/instances"
+
 
 # Aliases
 alias ls='ls --color=auto -la'
 alias grep='grep --color=auto'
 alias reload='source ~/.bashrc'
 
+
 # Hooks
 eval "$(mise activate bash)" # Mise
 
 
-
 # Custom Functions
-git() {
-  if [ "$1" == "s" ]; then
-    command git status
-  elif [ "$1" == "a" ]; then
-    command git add --all
-  elif [ "$1" == "c" ]; then
-    local msg="${@:2}"
-    command git commit -m "${msg:-Regular Commit}"
-  elif [ "$1" == "p" ]; then
-    command git push
-  elif [ "$1" == "acp" ]; then
-    git a
-    git c "${@:2}"
-    git p
-  else
-    command git "$@"
-  fi
-}
 
-cd() {
-  local storage="/run/media/abledtaha/Storage/"
-  if [ "$1" == "dot" ]; then
-    builtin cd ~/.dotfiles/
-  elif [ "$1" == "projects" ]; then
-    builtin cd "${storage}Documents/Projects/"
-  elif [ "$1" == "notes" ]; then
-    builtin cd "${storage}Documents/Obsidian/"
-  else
-    builtin cd "$@"
-  fi
-}
-
-vim() {
-  if [ "$1" == "bashrc" ]; then
-    command vim ~/.bashrc
-  elif [ "$1" == "hyprland" ]; then
-    command vim ~/.config/hypr/hyprland.conf
-  else
-    command vim "$@"
-  fi
-}
-
-ssh() {
-  if [ "$1" == "oracle" ]; then
-    command ssh ubuntu@abled.minecraftr.us
-  else
-    command ssh "$@"
-  fi
-}

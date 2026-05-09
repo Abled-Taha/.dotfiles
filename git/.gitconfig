@@ -3,3 +3,17 @@
 	email = abledtaha@gmail.com
 [init]
 	defaultBranch = main
+[alias]
+    a = add
+    c = commit
+    p = push
+
+    acp = "!f() { \
+        git add -A; \
+        if [ -z \"$1\" ]; then \
+            git commit -m \"Regular Commit\"; \
+        else \
+            git commit -m \"$*\"; \
+        fi; \
+        git push; \
+    }; f"
