@@ -4,16 +4,20 @@
 [init]
 	defaultBranch = main
 [alias]
-    a = add
-    c = commit
-    p = push
+	s = status
+	a = add
+	c = commit
+	p = push
+	l = log
 
-    acp = "!f() { \
-        git add -A; \
-        if [ -z \"$1\" ]; then \
-            git commit -m \"Regular Commit\"; \
-        else \
-            git commit -m \"$*\"; \
-        fi; \
-        git push; \
-    }; f"
+	acp = "!f() { \
+	    git add -A; \
+	    if [ -z \"$1\" ]; then \
+        	git commit -m \"Regular Commit\"; \
+	    else \
+	        git commit -m \"$*\"; \
+	    fi; \
+	    git push; \
+	}; f"
+[core]
+	pager = more

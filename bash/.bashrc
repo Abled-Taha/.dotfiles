@@ -16,6 +16,7 @@ PS1="${C_CYAN}[${C_GREEN}\u${C_CYAN}@\h] ${C_BLUE}\w${C_CYAN}\$(parse_git_branch
 
 
 # Custom Variables
+export oracle="abled.minecraftr.us"
 export STORAGE="/run/media/abledtaha/Storage"
 export projects="$STORAGE/Documents/Projects"
 export notes="$STORAGE/Documents/Obsidian"
