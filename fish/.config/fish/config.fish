@@ -20,6 +20,7 @@ set -gx oracle "abled.minecraftr.us"
 set -gx STORAGE /mnt/Storage
 set -gx dotfiles "$HOME/.dotfiles"
 set -gx projects "$STORAGE/Documents/Projects"
+set -gx projectslocal "$HOME/Projects/"
 set -gx notes "$STORAGE/Documents/Obsidian"
 set -gx fish "$dotfiles/fish/.config/fish/config.fish"
 set -gx hyprland "$dotfiles/hypr/.config/hypr/hyprland.conf"
