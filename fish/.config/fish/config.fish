@@ -18,10 +18,10 @@ set -gx VISUAL nvim
 # Ported Environment Variables & Quick Navigation Paths 
 set -gx oracle "abled.minecraftr.us"
 set -gx STORAGE /mnt/Storage
+set -gx dotfiles "$HOME/.dotfiles"
 set -gx projects "$STORAGE/Documents/Projects"
 set -gx notes "$STORAGE/Documents/Obsidian"
-set -gx bashrc "$HOME/.bashrc"
-set -gx dotfiles "$HOME/.dotfiles"
+set -gx fish "$dotfiles/fish/.config/fish/config.fish"
 set -gx hyprland "$dotfiles/hypr/.config/hypr/hyprland.conf"
 set -gx minecraft "$HOME/.local/share/PrismLauncher/instances"
 
