@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Start the wallpaper manager
-swaybg -i ~/.dotfiles/wallpapers/1.jpg >/dev/null 2>&1 &
+swaybg -i ~/.dotfiles/wallpapers/LPT/3-edited.png >/dev/null 2>&1 &
 
 # Update DBus and Systemd environments
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
