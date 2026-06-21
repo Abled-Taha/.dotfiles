@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Mimic Search
+Exec=xdg-open heroic://launch?appName=hKU3E2fH2aVLRw6Zk3QTAf&runner=sideload
+Terminal=false
+Type=Application
+Icon=/home/abledtaha/.var/app/com.heroicgameslauncher.hgl/config/heroic/icons/hKU3E2fH2aVLRw6Zk3QTAf.jpg
+Categories=Game;

@@ -6,3 +6,5 @@ include "%L" # Load system defaults (like accented letters)
 # Emojis
 <Multi_key> <e> <l> : "❤️" # Heart
 <Multi_key> <e> <f> : "🔥" # Fire
+<Multi_key> <e> <h> : "😂" # Laugh
+<Multi_key> <e> <a> : "😎" # Attitude
