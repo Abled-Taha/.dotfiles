@@ -19,5 +19,13 @@
 	    fi; \
 	    git push; \
 	}; f"
+  ac = "!f() { \
+	    git add -A; \
+	    if [ -z \"$1\" ]; then \
+        	git commit -m \"Regular Commit\"; \
+	    else \
+	        git commit -m \"$*\"; \
+	    fi; \
+	}; f"
 [core]
 	pager = more

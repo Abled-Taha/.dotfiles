@@ -14,3 +14,6 @@ text/x-moc=vim.desktop;
 text/x-pascal=vim.desktop;
 text/x-tcl=vim.desktop;
 text/x-tex=vim.desktop;
+x-scheme-handler/rlogin=ktelnetservice6.desktop;
+x-scheme-handler/ssh=ktelnetservice6.desktop;
+x-scheme-handler/telnet=ktelnetservice6.desktop;

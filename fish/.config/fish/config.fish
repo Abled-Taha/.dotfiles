@@ -34,7 +34,9 @@ alias tree="eza --tree --icons"
 alias cat="bat --style=plain"
 alias preview="bat"
 alias grep="grep --color=auto"
+alias cls="clear"
 alias g="git"
+alias z="zeditor"
 
 # Shell Management 
 alias reload="source ~/.config/fish/config.fish"
