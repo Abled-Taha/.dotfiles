@@ -21,6 +21,7 @@ set -gx STORAGE /mnt/Storage
 set -gx dotfiles "$HOME/.dotfiles"
 set -gx projects "$STORAGE/Documents/Projects"
 set -gx projectslocal "$HOME/Projects/"
+set -gx network "$STORAGE/Network"
 set -gx notes "$STORAGE/Documents/Obsidian"
 set -gx fish "$dotfiles/fish/.config/fish/config.fish"
 set -gx hyprland "$dotfiles/hypr/.config/hypr/hyprland.conf"
@@ -64,3 +65,12 @@ alias stop-win10="sudo virsh shutdown win10"
 alias kill-archlinux="sudo virsh destroy archlinux"
 alias kill-debian13="sudo virsh destroy debian13"
 alias kill-win10="sudo virsh destroy win10"
+
+## Custom Functions
+function get-codebase --description 'Generate a single text file of the current codebase structure and contents'
+    bash -c '(echo "=== DIRECTORY TREE ===" && tree -a -I "codebase.txt" && echo -e "\n=== FILE CONTENTS ===" && find . -type f -not -name "codebase.txt" | while read -r file; do echo -e "\n==> $file <=="; cat "$file"; done) > codebase.txt'
+    echo "✔ Codebase successfully dumped to codebase.txt"
+end
+
+# Created by `pipx` on 2026-07-07 17:27:04
+set PATH $PATH /home/abledtaha/.local/bin

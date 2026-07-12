@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Ben And Gwen - Sleepless Nights
+Exec=xdg-open heroic://launch?appName=pKRqUS6GizJcaMKZkKyQKn&runner=sideload
+Terminal=false
+Type=Application
+Icon=/home/abledtaha/.var/app/com.heroicgameslauncher.hgl/config/heroic/icons/pKRqUS6GizJcaMKZkKyQKn.jpg
+Categories=Game;
