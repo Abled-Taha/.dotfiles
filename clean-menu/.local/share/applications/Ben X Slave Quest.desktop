@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Ben X Slave Quest
+Exec=xdg-open heroic://launch?appName=kYsJMZKh1ixHbUgtYqxu9x&runner=sideload
+Terminal=false
+Type=Application
+Icon=/home/abledtaha/.var/app/com.heroicgameslauncher.hgl/config/heroic/icons/kYsJMZKh1ixHbUgtYqxu9x.jpg
+Categories=Game;

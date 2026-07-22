@@ -1,16 +1,3 @@
-if status is-interactive
-    # Initialize Starship Prompt 
-    starship init fish | source
-
-    # Initialize Mise Environment Manager 
-    if type -q mise
-        mise activate fish | source
-    end
-end
-
-# Disable the default greeting message 
-set -g fish_greeting ""
-
 # Set environment variables securely 
 set -gx EDITOR nvim
 set -gx VISUAL nvim
@@ -26,6 +13,23 @@ set -gx notes "$STORAGE/Documents/Obsidian"
 set -gx fish "$dotfiles/fish/.config/fish/config.fish"
 set -gx hyprland "$dotfiles/hypr/.config/hypr/hyprland.conf"
 set -gx minecraft "$HOME/.local/share/PrismLauncher/instances"
+
+# Add custom local binaries safely to PATH without breaking Fish lists
+fish_add_path /home/abledtaha/.local/bin
+
+if status is-interactive
+    # Initialize Starship Prompt 
+    starship init fish | source
+
+    # Initialize Mise Environment Manager (Always activate LAST after PATH setups)
+    if type -q mise
+        mise activate fish | source
+        mise hook-env -s fish | source
+    end
+end
+
+# Disable the default greeting message 
+set -g fish_greeting ""
 
 # Modern File Listing & Utilities Aliases 
 alias ls="eza --icons --color=always --group-directories-first"
@@ -71,6 +75,3 @@ function get-codebase --description 'Generate a single text file of the current 
     bash -c '(echo "=== DIRECTORY TREE ===" && tree -a -I "codebase.txt" && echo -e "\n=== FILE CONTENTS ===" && find . -type f -not -name "codebase.txt" | while read -r file; do echo -e "\n==> $file <=="; cat "$file"; done) > codebase.txt'
     echo "✔ Codebase successfully dumped to codebase.txt"
 end
-
-# Created by `pipx` on 2026-07-07 17:27:04
-set PATH $PATH /home/abledtaha/.local/bin
