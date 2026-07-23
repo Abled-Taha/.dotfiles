@@ -11,6 +11,7 @@ set -gx projectslocal "$HOME/Projects/"
 set -gx network "$STORAGE/Network"
 set -gx notes "$STORAGE/Documents/Obsidian"
 set -gx fish "$dotfiles/fish/.config/fish/config.fish"
+set -gx mango "$dotfiles/mango/.config/mango/config.conf"
 set -gx hyprland "$dotfiles/hypr/.config/hypr/hyprland.conf"
 set -gx minecraft "$HOME/.local/share/PrismLauncher/instances"
 
