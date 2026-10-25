@@ -1,0 +1,11 @@
+include "%L" # Load system defaults (like accented letters)
+
+# Format: <Compose> <key1> <key2> : "Result"
+# Aliases
+<Multi_key> <e> <m> <a> <i> <l> : "abledtaha@gmail.com"
+# Emojis
+<Multi_key> <colon> <h> <e> <a> <r> <t> : "❤️" # Heart
+<Multi_key> <colon> <f> <i> <r> <e> : "🔥" # Fire
+<Multi_key> <colon> <l> <a> <u> <g> <h> : "😂" # Laugh
+<Multi_key> <colon> <a> <t> <t> <i> <t> <u> <d> <e> : "😎" # Attitude
+<Multi_key> <colon> <f> <i> <n> <g> <e> <r> : "🖕" # Middle Finger

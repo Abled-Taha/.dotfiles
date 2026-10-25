@@ -1,0 +1,10 @@
+[[rule.window_rule]]
+is_fullscreen = 1
+app_id = "librewolf"
+monitor = "DP-2"
+tags = 1
+
+[[rule.window_rule]]
+is_fullscreen = 1
+app_id = "Sober"
+confine_pointer = 1

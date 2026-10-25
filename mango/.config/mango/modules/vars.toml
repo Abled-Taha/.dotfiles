@@ -1,0 +1,35 @@
+[var]
+# Apps
+"TERMINAL" = "alacritty"
+"FILE_MANAGER" = "$TERMINAL -e spf"
+"SYSTEM_MONITOR" = "$TERMINAL -e btop"
+"TEXT_EDITOR" = "$TERMINAL -e vim"
+"IDE" = "zeditor"
+"BROWSER" = "librewolf"
+"BROWSER_PRIVATE" = "$BROWSER --private-window"
+
+# Quickshell
+"MENU" = "quickshell msg launcher toggle"
+"HELP" = "quickshell msg keybinds toggle"
+
+# Paths
+"STORAGE" = "/mnt/Storage"
+"PROJECTS" = "$HOME/Projects"
+"DOTFILES" = "$HOME/.dotfiles"
+"IRONBOOK" = "$PROJECTS/programming/ironbook"
+
+# Games
+"HEROIC" = "heroic"
+"SOBER" = "flatpak run org.vinegarhq.Sober"
+
+# Browser Apps
+GEMINI = "https://gemini.google.com"
+YOUTUBE = "https://youtube.com"
+WHATSAPP = "https://web.whatsapp.com"
+GMAIL = "https://gmail.com"
+GITHUB = "https://github.com"
+
+# Browser Apps: Github
+GITHUB_ME = "$GITHUB/Abled-Taha"
+GITHUB_DOTFILES = "$GITHUB_ME/.dotfiles"
+GITHUB_IRONBOOK = "$GITHUB/ironbook-labs/ironbook"

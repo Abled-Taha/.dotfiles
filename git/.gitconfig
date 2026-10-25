@@ -1,0 +1,43 @@
+[user]
+	name = Abled-Taha
+	email = abledtaha@gmail.com
+[init]
+	defaultBranch = main
+[alias]
+	s = status
+	a = add
+	c = commit
+	p = push
+	l = log
+
+	acp = "!f() { \
+	    git add -A; \
+	    if [ -z \"$1\" ]; then \
+        	git commit -m \"Regular Commit\"; \
+	    else \
+	        git commit -m \"$*\"; \
+	    fi; \
+	    git push; \
+		notify-send -r 9910 -a "Git" -i "ACP Complete" "$(pwd)" ; \
+	}; f"
+  	ac = "!f() { \
+	    git add -A; \
+	    if [ -z \"$1\" ]; then \
+        	git commit -m \"Regular Commit\"; \
+	    else \
+	        git commit -m \"$*\"; \
+	    fi; \
+		notify-send -r 9910 -a "Git" -i "AC Complete" "$(pwd)" ; \
+	}; f"
+[core]
+	pager = more
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[push]
+	autoSetupRemote = true
+[pull]
+	rebase = false

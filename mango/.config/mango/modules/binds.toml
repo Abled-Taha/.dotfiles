@@ -1,0 +1,156 @@
+[bind.common.conflict]
+"none+XF86AudioLowerVolume" = "spawn_shell, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+"none+XF86AudioRaiseVolume" = "spawn_shell, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+"none+XF86AudioMute" = "spawn_shell, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+"none+XF86AudioMicMute" = "spawn_shell, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+
+[bind.default]
+"super+slash" = "spawn_shell, quickshell msg keybinds toggle"
+"super+m" = "setkeymode, mango"
+"super+w" = "setkeymode, window"
+"super+s" = "setkeymode, special"
+"super+space" = "setkeymode, system_apps"
+"super+return" = "setkeymode, user_apps"
+
+"super+1" = "view, 1, 0"
+"super+2" = "view, 2, 0"
+"super+3" = "view, 3, 0"
+"super+4" = "view, 4, 0"
+"super+5" = "view, 5, 0"
+"super+6" = "view, 6, 0"
+"super+7" = "view, 7, 0"
+"super+8" = "view, 8, 0"
+"super+9" = "view, 9, 0"
+
+"super+up" = "focusdir, up"
+"super+down" = "focusdir, down"
+"super+left" = "focusdir, left"
+"super+right" = "focusdir, right"
+"super+shift+up" = "focusmon, up"
+"super+shift+down" = "focusmon, down"
+"super+shift+left" = "focusmon, left"
+"super+shift+right" = "focusmon, right"
+
+[bind.mango.conflict]
+"none+q" = "quit"
+"none+r" = ["setkeymode, default", "reload_config"]
+"none+escape" = "setkeymode, default"
+
+[bind.special.conflict]
+"none+s" = "spawn_shell, shutdown now"
+"none+r" = "spawn_shell, shutdown -r now"
+"none+p" = ["spawn_shell, grim -l 0 -g \"$(slurp)\" - | wl-copy", "setkeymode, default"]
+"none+c" = ["spawn_shell, notify-send -r 9910 -a \"System\" -i \"clock\" \"Current Time\" \"$(date +'%A, %B %d - %I:%M %p')\"", "setkeymode, default"]
+"none+m" = "setkeymode, monitor"
+"none+l" = ["switch_keyboard_layout", "setkeymode, default"]
+"none+escape" = "setkeymode, default"
+
+[bind.window.conflict]
+"none+q" = ["killclient", "setkeymode, default"]
+"none+up" = "move_client, up"
+"none+down" = "move_client, down"
+"none+left" = "move_client, left"
+"none+right" = "move_client, right"
+"shift+left" = "tagmon, left"
+"shift+right" = "tagmon, right"
+"none+t" = "togglefloating"
+"none+f" = "togglefullscreen"
+"none+1" = "tag, 1, 0"
+"none+2" = "tag, 2, 0"
+"none+3" = "tag, 3, 0"
+"none+4" = "tag, 4, 0"
+"none+5" = "tag, 5, 0"
+"none+6" = "tag, 6, 0"
+"none+7" = "tag, 7, 0"
+"none+8" = "tag, 8, 0"
+"none+9" = "tag, 9, 0"
+"shift+1" = "tagsilent, 1, 0"
+"shift+2" = "tagsilent, 2, 0"
+"shift+3" = "tagsilent, 3, 0"
+"shift+4" = "tagsilent, 4, 0"
+"shift+5" = "tagsilent, 5, 0"
+"shift+6" = "tagsilent, 6, 0"
+"shift+7" = "tagsilent, 7, 0"
+"shift+8" = "tagsilent, 8, 0"
+"shift+9" = "tagsilent, 9, 0"
+"none+r" = "setkeymode, resize"
+"none+m" = "setkeymode, move"
+"none+escape" = "setkeymode, default"
+
+[bind.resize]
+"up" = "resizewin, +0, -10"
+"down" = "resizewin, +0, +10"
+"left" = "resizewin, -10, +0"
+"right" = "resizewin, +10, +0"
+"none+escape" = "setkeymode, default"
+
+[bind.move]
+"up" = "movewin, +0, -10"
+"down" = "movewin, +0, +10"
+"left" = "movewin, -10, +0"
+"right" = "movewin, +10, +0"
+"none+escape" = "setkeymode, default"
+
+[bind.monitor.conflict]
+"none+1" = ["spawn_shell, mmsg dispatch toggle_monitor, DP-2", "setkeymode, default"]
+"none+2" = ["spawn_shell, mmsg dispatch toggle_monitor, eDP-1", "setkeymode, default"]
+"none+m" = ["spawn_shell, mmsg dispatch toggle_monitor, DP-2", "spawn_shell, mmsg dispatch toggle_monitor, eDP-1", "setkeymode, default"]
+"none+escape" = "setkeymode, default"
+
+[bind.system_apps.conflict]
+"none+return" = ["spawn, $TERMINAL", "setkeymode, default"]
+"none+space" = ["spawn_shell,$MENU", "setkeymode, default"]
+"none+r" = ["spawn_shell, quickshell msg runner toggle", "setkeymode, default"]
+"none+f" = ["spawn, $FILE_MANAGER", "setkeymode, default"]
+"none+t" = ["spawn, $SYSTEM_MONITOR", "setkeymode, default"]
+"none+escape" = "setkeymode, default"
+
+[bind.user_apps.conflict]
+"none+t" = ["spawn, $TEXT_EDITOR", "setkeymode, default"]
+"none+c" = "setkeymode, programming"
+"none+g" = "setkeymode, games"
+"none+b" = "setkeymode, browser_apps"
+"none+escape" = "setkeymode, default"
+
+[bind.games.conflict]
+"none+g" = ["spawn, $HEROIC", "setkeymode, default"]
+"none+s" = ["spawn, $SOBER", "setkeymode, default"]
+"none+escape" = "setkeymode, default"
+
+[bind.programming.conflict]
+"none+c" = ["spawn, $IDE", "setkeymode, default"]
+"none+1" = ["spawn, $IDE $DOTFILES", "setkeymode, default"]
+"none+2" = ["spawn, $IDE $IRONBOOK", "setkeymode, default"]
+"none+escape" = "setkeymode, default"
+
+[bind.browser_apps.conflict]
+"none+space" = ["spawn_shell, quickshell msg internet_search toggle", "setkeymode, default"]
+"none+b" = ["spawn, $BROWSER", "setkeymode, default"]
+"shift+b" = ["spawn, $BROWSER_PRIVATE", "setkeymode, default"]
+"none+g" = ["spawn, $BROWSER $GEMINI", "setkeymode, default"]
+"shift+g" = ["spawn, $BROWSER_PRIVATE $GEMINI", "setkeymode, default"]
+"none+y" = ["spawn, $BROWSER $YOUTUBE", "setkeymode, default"]
+"shift+y" = ["spawn, $BROWSER_PRIVATE $YOUTUBE", "setkeymode, default"]
+"none+w" = ["spawn, $BROWSER $WHATSAPP", "setkeymode, default"]
+"shift+w" = ["spawn, $BROWSER_PRIVATE $WHATSAPP", "setkeymode, default"]
+"none+m" = ["spawn, $BROWSER $GMAIL", "setkeymode, default"]
+"shift+m" = ["spawn, $BROWSER_PRIVATE $GMAIL", "setkeymode, default"]
+"none+c" = "setkeymode, browser_apps_github"
+"none+escape" = "setkeymode, default"
+
+[bind.browser_apps_github.conflict]
+"none+c" = ["spawn, $BROWSER $GITHUB", "setkeymode, default"]
+"shift+c" = ["spawn, $BROWSER_PRIVATE $GITHUB", "setkeymode, default"]
+"none+m" = ["spawn, $BROWSER $GITHUB_ME", "setkeymode, default"]
+"shift+m" = ["spawn, $BROWSER_PRIVATE $GITHUB_ME", "setkeymode, default"]
+"none+1" = ["spawn, $BROWSER $GITHUB_DOTFILES", "setkeymode, default"]
+"shift+1" = ["spawn, $BROWSER_PRIVATE $GITHUB_DOTFILES", "setkeymode, default"]
+"none+2" = ["spawn, $BROWSER $GITHUB_IRONBOOK", "setkeymode, default"]
+"shift+2" = ["spawn, $BROWSER_PRIVATE $GITHUB_IRONBOOK", "setkeymode, default"]
+"none+escape" = "setkeymode, default"
+
+[mousebind.default]
+# Mouse Button Bindings
+# btn_left and btn_right can't bind none mod key
+"SUPER+btn_left" = "moveresize,curmove"
+"SUPER+btn_right" = "moveresize,curresize"

@@ -1,0 +1,53 @@
+# General settings
+[general]
+import = [] # Import additional configuration files if needed
+live_config_reload = true # Apply changes instantly upon saving
+
+[window]
+padding = { x = 24, y = 12 }
+dynamic_padding = true
+opacity = 1 # Slight transparency (0.0 to 1.0)
+blur = false    # Enables background blur on macOS/KDE
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[font]
+size = 16.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font" # Change to your preferred installed font
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+
+# Color Schemes (Example: Gruvbox Dark)
+[colors.primary]
+background = "0x000000"
+foreground = "0xffffff"
+
+[colors.normal]
+black   = "0x282828"
+red     = "0xcc241d"
+green   = "0x98971a"
+yellow  = "0xd79921"
+blue    = "0x458588"
+magenta = "0xb16286"
+cyan    = "0x689d6a"
+white   = "0xa89984"
+
+[colors.bright]
+black   = "0x928374"
+red     = "0xfb4934"
+green   = "0xb8bb26"
+yellow  = "0xfabd2f"
+blue    = "0x83a598"
+magenta = "0xd3869b"
+cyan    = "0x8ec07c"
+white   = "0xebdbb2"

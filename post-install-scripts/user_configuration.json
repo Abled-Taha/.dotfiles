@@ -1,0 +1,236 @@
+{
+    "app_config": {
+        "audio_config": {
+            "audio": "pipewire"
+        },
+        "bluetooth_config": {
+            "enabled": true
+        },
+        "fonts_config": {
+            "fonts": [
+                "noto-fonts",
+                "noto-fonts-emoji",
+                "noto-fonts-cjk",
+                "ttf-liberation",
+                "ttf-dejavu"
+            ]
+        }
+    },
+    "archinstall_language": "English",
+    "auth_config": {},
+    "bootloader_config": {
+        "bootloader": "Systemd-boot",
+        "removable": false,
+        "uki": true
+    },
+    "custom_commands": [],
+    "disk_config": {
+        "btrfs_options": {
+            "snapshot_config": {
+                "type": "Timeshift"
+            }
+        },
+        "config_type": "manual_partitioning",
+        "device_modifications": [
+            {
+                "device": "/dev/sda",
+                "partitions": [
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [
+                            "boot",
+                            "esp"
+                        ],
+                        "fs_type": "fat32",
+                        "mount_options": [],
+                        "mountpoint": "/boot",
+                        "obj_id": "113de4d3-c517-4f23-99c5-bd58f7047df7",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "GiB",
+                            "value": 1
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "MiB",
+                            "value": 1
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [
+                            {
+                                "mountpoint": "/",
+                                "name": "@"
+                            },
+                            {
+                                "mountpoint": "/home",
+                                "name": "@home"
+                            },
+                            {
+                                "mountpoint": "/var/log",
+                                "name": "@log"
+                            },
+                            {
+                                "mountpoint": "/var/cache/pacman/pkg",
+                                "name": "@pkg"
+                            }
+                        ],
+                        "dev_path": null,
+                        "flags": [],
+                        "fs_type": "btrfs",
+                        "mount_options": [
+                            "compress=zstd"
+                        ],
+                        "mountpoint": null,
+                        "obj_id": "6fdfe3bc-9bab-4c48-be42-365141eec68b",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 178969903104
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 1074790400
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": true
+            },
+            {
+                "device": "/dev/sdc",
+                "partitions": [
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [],
+                        "fs_type": "ext4",
+                        "mount_options": [],
+                        "mountpoint": "/mnt/Storage",
+                        "obj_id": "0e9574fe-cc52-4fe3-a7ed-f80c42a0fe7b",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 1000202043392
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "MiB",
+                            "value": 1
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": true
+            }
+        ],
+        "disk_encryption": {
+            "encryption_type": "luks",
+            "lvm_volumes": [],
+            "partitions": [
+                "0e9574fe-cc52-4fe3-a7ed-f80c42a0fe7b",
+                "6fdfe3bc-9bab-4c48-be42-365141eec68b"
+            ]
+        }
+    },
+    "firmware_optdeps": [],
+    "hostname": "archabled",
+    "kernels": [
+        "linux"
+    ],
+    "locale_config": {
+        "console_font": "default8x16",
+        "kb_layout": "us",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US.UTF-8"
+    },
+    "mirror_config": {
+        "custom_repositories": [],
+        "custom_servers": [],
+        "mirror_regions": {
+            "India": [
+                "http://in.mirrors.cicku.me/archlinux/$repo/os/$arch",
+                "https://in.mirrors.cicku.me/archlinux/$repo/os/$arch",
+                "https://mirror.maa.albony.in/archlinux/$repo/os/$arch",
+                "http://mirror.sahil.world/archlinux/$repo/os/$arch",
+                "https://mirror.sahil.world/archlinux/$repo/os/$arch",
+                "http://mirrors.nxtgen.com/archlinux-mirror/$repo/os/$arch",
+                "https://mirrors.nxtgen.com/archlinux-mirror/$repo/os/$arch",
+                "http://mirror.4v1.in/archlinux/$repo/os/$arch",
+                "https://mirror.4v1.in/archlinux/$repo/os/$arch",
+                "https://in.arch.niranjan.co/$repo/os/$arch",
+                "http://mirrors.saswata.cc/archlinux/$repo/os/$arch",
+                "https://mirrors.saswata.cc/archlinux/$repo/os/$arch",
+                "http://archlinux.kushwanthreddy.com/$repo/os/$arch",
+                "https://archlinux.kushwanthreddy.com/$repo/os/$arch",
+                "https://mirror.dawn.org.in/arch/$repo/os/$arch",
+                "https://mirror.bom.kat.cx/archlinux/$repo/os/$arch"
+            ],
+            "Worldwide": [
+                "http://mirror.rackspace.com/archlinux/$repo/os/$arch",
+                "https://mirror.rackspace.com/archlinux/$repo/os/$arch",
+                "https://ftpmirror.infania.net/mirror/archlinux/$repo/os/$arch",
+                "https://geo.mirror.pkgbuild.com/$repo/os/$arch",
+                "https://fastly.mirror.pkgbuild.com/$repo/os/$arch"
+            ]
+        },
+        "optional_repositories": [
+            "multilib",
+            "multilib-testing",
+            "core-testing",
+            "extra-testing"
+        ]
+    },
+    "network_config": {
+        "type": "nm_iwd"
+    },
+    "ntp": true,
+    "packages": [
+        "vim"
+    ],
+    "pacman_config": {
+        "color": true,
+        "parallel_downloads": 5
+    },
+    "profile_config": {
+        "gfx_driver": null,
+        "greeter": null,
+        "profile": {
+            "custom_settings": {},
+            "details": [],
+            "main": "Minimal"
+        }
+    },
+    "script": null,
+    "services": [],
+    "swap": {
+        "algorithm": "zstd",
+        "enabled": true
+    },
+    "timezone": "Asia/Karachi",
+    "version": "4.5"
+}
