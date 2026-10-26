@@ -3,6 +3,8 @@
 "none+XF86AudioRaiseVolume" = "spawn_shell, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
 "none+XF86AudioMute" = "spawn_shell, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 "none+XF86AudioMicMute" = "spawn_shell, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+"none+XF86MonBrightnessUp" = "spawn_shell, brightnessctl -e4 -n2 set 5%+"
+"none+XF86MonBrightnessDown" = "spawn_shell, brightnessctl -e4 -n2 set 5%-"
 
 [bind.default]
 "super+slash" = "spawn_shell, quickshell msg keybinds toggle"
