@@ -21,6 +21,7 @@
 # Games
 "HEROIC" = "heroic"
 "SOBER" = "flatpak run org.vinegarhq.Sober"
+"COMBAT_MASTER" = "steam steam://rungameid/2281730"
 
 # Browser Apps
 GEMINI = "https://gemini.google.com"

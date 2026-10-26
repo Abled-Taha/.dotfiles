@@ -117,6 +117,7 @@
 [bind.games.conflict]
 "none+g" = ["spawn, $HEROIC", "setkeymode, default"]
 "none+s" = ["spawn, $SOBER", "setkeymode, default"]
+"none+c" = ["spawn, $COMBAT_MASTER", "setkeymode, default"]
 "none+escape" = "setkeymode, default"
 
 [bind.programming.conflict]
