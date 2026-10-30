@@ -138,6 +138,8 @@
 "shift+w" = ["spawn, $BROWSER_PRIVATE $WHATSAPP", "setkeymode, default"]
 "none+m" = ["spawn, $BROWSER $GMAIL", "setkeymode, default"]
 "shift+m" = ["spawn, $BROWSER_PRIVATE $GMAIL", "setkeymode, default"]
+"none+r" = ["spawn, $BROWSER $REDDIT", "setkeymode, default"]
+"shift+r" = ["spawn, $BROWSER_PRIVATE $REDDIT", "setkeymode, default"]
 "none+c" = "setkeymode, browser_apps_github"
 "none+escape" = "setkeymode, default"
 

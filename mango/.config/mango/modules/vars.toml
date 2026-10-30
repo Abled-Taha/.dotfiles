@@ -29,6 +29,7 @@ YOUTUBE = "https://youtube.com"
 WHATSAPP = "https://web.whatsapp.com"
 GMAIL = "https://gmail.com"
 GITHUB = "https://github.com"
+REDDIT = "https://reddit.com"
 
 # Browser Apps: Github
 GITHUB_ME = "$GITHUB/Abled-Taha"
