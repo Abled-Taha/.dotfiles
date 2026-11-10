@@ -130,8 +130,11 @@
 "none+space" = ["spawn_shell, quickshell msg internet_search toggle", "setkeymode, default"]
 "none+b" = ["spawn, $BROWSER", "setkeymode, default"]
 "shift+b" = ["spawn, $BROWSER_PRIVATE", "setkeymode, default"]
+"alt+b" = ["spawn, $TOR_BROWSER", "setkeymode, default"]
 "none+g" = ["spawn, $BROWSER $GEMINI", "setkeymode, default"]
 "shift+g" = ["spawn, $BROWSER_PRIVATE $GEMINI", "setkeymode, default"]
+"alt+g" = ["spawn, $BROWSER $CHATGPT", "setkeymode, default"]
+"shift+alt+g" = ["spawn, $BROWSER_PRIVATE $CHATGPT", "setkeymode, default"]
 "none+y" = ["spawn, $BROWSER $YOUTUBE", "setkeymode, default"]
 "shift+y" = ["spawn, $BROWSER_PRIVATE $YOUTUBE", "setkeymode, default"]
 "none+w" = ["spawn, $BROWSER $WHATSAPP", "setkeymode, default"]
@@ -140,6 +143,10 @@
 "shift+m" = ["spawn, $BROWSER_PRIVATE $GMAIL", "setkeymode, default"]
 "none+r" = ["spawn, $BROWSER $REDDIT", "setkeymode, default"]
 "shift+r" = ["spawn, $BROWSER_PRIVATE $REDDIT", "setkeymode, default"]
+"none+d" = ["spawn, $BROWSER $DISCORD", "setkeymode, default"]
+"shift+d" = ["spawn, $BROWSER_PRIVATE $DISCORD", "setkeymode, default"]
+"none+s" = ["spawn, $BROWSER $YT_MUSIC", "setkeymode, default"]
+"shift+s" = ["spawn, $BROWSER_PRIVATE $YT_MUSIC", "setkeymode, default"]
 "none+c" = "setkeymode, browser_apps_github"
 "none+escape" = "setkeymode, default"
 

@@ -6,6 +6,7 @@
 "TEXT_EDITOR" = "$TERMINAL -e vim"
 "IDE" = "zeditor"
 "BROWSER" = "librewolf"
+"TOR_BROWSER" = "torbrowser-launcher"
 "BROWSER_PRIVATE" = "$BROWSER --private-window"
 
 # Quickshell
@@ -30,6 +31,9 @@ WHATSAPP = "https://web.whatsapp.com"
 GMAIL = "https://gmail.com"
 GITHUB = "https://github.com"
 REDDIT = "https://reddit.com"
+DISCORD = "https://discord.com/channels/@me"
+CHATGPT = "https://chatgpt.com"
+YT_MUSIC = "https://music.youtube.com"
 
 # Browser Apps: Github
 GITHUB_ME = "$GITHUB/Abled-Taha"
