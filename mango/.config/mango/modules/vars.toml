@@ -1,41 +1,54 @@
 [var]
-# Apps
-"TERMINAL" = "alacritty"
-"FILE_MANAGER" = "$TERMINAL -e spf"
-"SYSTEM_MONITOR" = "$TERMINAL -e btop"
-"TEXT_EDITOR" = "$TERMINAL -e vim"
-"IDE" = "zeditor"
-"BROWSER" = "librewolf"
-"TOR_BROWSER" = "torbrowser-launcher"
-"BROWSER_PRIVATE" = "$BROWSER --private-window"
+# System Apps
+"SystemApps_Terminal" = "alacritty"
+"SystemApps_FileManager" = "$SystemApps_Terminal -e spf"
+"SystemApps_SystemMonitor" = "$SystemApps_Terminal -e btop"
+
+# User Apps
+"UserApps_TextEditor" = "$SystemApps_Terminal -e vim"
+"UserApps_IDE" = "$SystemApps_Terminal -e nvim"
+"UserApps_Browser" = "librewolf"
+"UserApps_TorBrowser" = "torbrowser-launcher"
+"UserApps_BrowserPrivate" = "$UserApps_Browser --private-window"
 
 # Quickshell
-"MENU" = "quickshell msg launcher toggle"
-"HELP" = "quickshell msg keybinds toggle"
+"Menu" = "quickshell msg launcher toggle"
+"Help" = "quickshell msg keybinds toggle"
 
 # Paths
-"STORAGE" = "/mnt/Storage"
-"PROJECTS" = "$HOME/Projects"
-"DOTFILES" = "$HOME/.dotfiles"
-"IRONBOOK" = "$PROJECTS/programming/ironbook"
+"Paths_Projects" = "$HOME/Projects"
+"Paths_Dotfiles" = "$HOME/.dotfiles"
+"Paths_Projects_Ironbook" = "$Paths_Projects/programming/ironbook"
 
 # Games
-"HEROIC" = "heroic"
-"SOBER" = "flatpak run org.vinegarhq.Sober"
-"COMBAT_MASTER" = "steam steam://rungameid/2281730"
+"UserApps_Games_Heroic" = "heroic"
+"UserApps_Games_Roblox" = "flatpak run org.vinegarhq.Sober"
+"UserApps_Games_CombatMaster" = "steam steam://rungameid/2281730"
 
-# Browser Apps
-GEMINI = "https://gemini.google.com"
-YOUTUBE = "https://youtube.com"
-WHATSAPP = "https://web.whatsapp.com"
-GMAIL = "https://gmail.com"
-GITHUB = "https://github.com"
-REDDIT = "https://reddit.com"
-DISCORD = "https://discord.com/channels/@me"
-CHATGPT = "https://chatgpt.com"
-YT_MUSIC = "https://music.youtube.com"
+# Browser Apps: AI
+UserApps_BrowserApps_AI_Gemini = "https://gemini.google.com"
+UserApps_BrowserApps_AI_ChatGPT = "https://chatgpt.com"
+
+# Browser Apps: Entertainment
+UserApps_BrowserApps_Entertainment_YouTube = "https://youtube.com"
+UserApps_BrowserApps_Entertainment_YouTubeMusic = "https://music.youtube.com"
+
+# Browser Apps: Chat
+UserApps_BrowserApps_Chat_WhatsApp = "https://web.whatsapp.com"
+UserApps_BrowserApps_Chat_Gmail = "https://gmail.com"
+UserApps_BrowserApps_Chat_Discord = "https://discord.com/channels/@me"
+
+# Browser Apps: Social Media
+UserApps_BrowserApps_SocialMedia_Reddit = "https://reddit.com"
+
+# Browser Apps: Games
+UserApps_BrowserApps_Games_Roblox = "https://roblox.com"
+UserApps_BrowserApps_Games_Chess = "https://chess.com"
+
+# Browser Apps: Programming
+UserApps_BrowserApps_Programming_GitHub = "https://github.com"
 
 # Browser Apps: Github
-GITHUB_ME = "$GITHUB/Abled-Taha"
-GITHUB_DOTFILES = "$GITHUB_ME/.dotfiles"
-GITHUB_IRONBOOK = "$GITHUB/ironbook-labs/ironbook"
+UserApps_BrowserApps_Programming_GitHub_Me = "$UserApps_BrowserApps_Programming_GitHub/Abled-Taha"
+UserApps_BrowserApps_Programming_GitHub_Dotfiles = "$UserApps_BrowserApps_Programming_GitHub/.dotfiles"
+UserApps_BrowserApps_Programming_GitHub_Ironbook = "$UserApps_BrowserApps_Programming_GitHub/ironbook-labs/ironbook"
