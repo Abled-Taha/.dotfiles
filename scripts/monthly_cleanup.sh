@@ -7,4 +7,3 @@ rm -rf ~/.cache/
 rm -rf ~/.var/app/*/cache/
 rm -rf ~/.local/share/Trash/
 rm -rf ~/.local/shaare/Share/Trash/
-rm -rf $STORAGE/.Trash-1000/
