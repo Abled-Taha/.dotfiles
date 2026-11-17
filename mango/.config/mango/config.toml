@@ -1,7 +1,7 @@
 [global]
 
 source = ["./modules/vars.toml", "./modules/binds.toml", "./modules/monitors.toml", "./modules/env.toml", "./modules/tags.toml", "./modules/windows.toml"]
-exec_once = ["quickshell &", "kmonad $HOME/.dotfiles/keyboard.kbd &", "wl-clip-persist --clipboard regular --reconnect-tries 0 &", "wl-paste text --watch cliphist store &", "/usr/lib/xdg-desktop-portal-wlr &"]
+exec_once = ["quickshell &", "kmonad $HOME/.dotfiles/keyboard.kbd &", "wl-clip-persist --clipboard regular --reconnect-tries 0 &", "wl-paste text --watch cliphist store &", "/usr/lib/xdg-desktop-portal-wlr &", "gnome-keyring-daemon --daemonize --components=secrets"]
 
 # Decorations
 blur = 0
