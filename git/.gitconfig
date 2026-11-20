@@ -9,6 +9,7 @@
 	c = commit
 	p = push
 	l = log
+	t = tag
 
 	acp = "!f() { \
 	    git add -A; \
