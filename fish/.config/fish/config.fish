@@ -6,7 +6,7 @@ set -gx VISUAL vim
 set -gx USB /mnt/usb
 set -gx dotfiles "$HOME/.dotfiles"
 set -gx projects "$HOME/Projects/"
-set -gx notes "$HOME/Documents/Obsidian"
+set -gx notes "$HOME/Documents/obsidian"
 set -gx minecraft "$HOME/.local/share/PrismLauncher/instances"
 
 if status is-interactive

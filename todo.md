@@ -1,3 +1,5 @@
-tmux 
-copy pasting
-Lockscreen and change display off to another bind
+nix
+
+in scripts:
+add script to change shell to fish
+add script to setup autologin
