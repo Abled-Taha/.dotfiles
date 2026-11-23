@@ -45,6 +45,7 @@
 "none+t" = ["spawn_shell, $Paths_Dotfiles/scripts/time.sh", "setkeymode, default"]
 "none+b" = ["spawn_shell, $Paths_Dotfiles/scripts/battery.sh", "setkeymode, default"]
 "none+m" = "setkeymode, monitor"
+"none+w" = ["spawn_shell, quickshell msg wallpaper toggle", "setkeymode, default"]
 "none+l" = ["switch_keyboard_layout", "setkeymode, default"]
 "none+escape" = "setkeymode, default"
 

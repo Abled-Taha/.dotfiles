@@ -73,8 +73,8 @@ Scope {
             required property var modelData
 
             screen: modelData
-            visible: root.active && Quickshell.screens.length > 0 && modelData.name === Quickshell.screens[0].name
-            active: root.active
+	    visible: root.active
+	    active: root.active
             title: "Applications"
 
             onVisibleChanged: {

@@ -26,12 +26,6 @@ alias grep="grep --color=auto"
 alias g="git"
 alias update="yay -Syu && flatpak update"
 alias cleanup="$dotfiles/scripts/monthly_cleanup.sh"
-alias changewallpaper="$dotfiles/scripts/change_wallpaper.sh"
-alias listwallpapers="ls -la $dotfiles/wallpapers/"
-
-function viewwallpaper
-    imv "$dotfiles/wallpapers/$argv[1].jpg"
-end
 
 # Shell Management
 alias reload="exec fish"
