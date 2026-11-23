@@ -42,7 +42,7 @@
 "none+s" = "spawn_shell, shutdown now"
 "none+r" = "spawn_shell, shutdown -r now"
 "none+p" = ["spawn_shell, $Paths_Dotfiles/scripts/screenshot.sh", "setkeymode, default"]
-"none+c" = ["spawn_shell, $Paths_Dotfiles/scripts/clock.sh", "setkeymode, default"]
+"none+t" = ["spawn_shell, $Paths_Dotfiles/scripts/time.sh", "setkeymode, default"]
 "none+b" = ["spawn_shell, $Paths_Dotfiles/scripts/battery.sh", "setkeymode, default"]
 "none+m" = "setkeymode, monitor"
 "none+l" = ["switch_keyboard_layout", "setkeymode, default"]
