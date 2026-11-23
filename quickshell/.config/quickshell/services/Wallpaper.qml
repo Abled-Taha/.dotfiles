@@ -6,7 +6,7 @@ Scope {
     id: root
 
     // Hardcoded wallpaper path (update to your desired image path)
-    property string wallpaperPath: "/home/abledtaha/.dotfiles/wallpapers/1.jpg"
+    property string wallpaperPath: "/home/abledtaha/.dotfiles/wallpapers/black_screen_half_moon"
 
     Variants {
         model: Quickshell.screens
