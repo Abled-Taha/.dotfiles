@@ -3,6 +3,7 @@
 "SystemApps_Terminal" = "alacritty"
 "SystemApps_FileManager" = "$SystemApps_Terminal -e spf"
 "SystemApps_SystemMonitor" = "$SystemApps_Terminal -e btop"
+"SystemApps_SystemInformation" = "$SystemApps_Terminal -e bash -ic 'sleep 0.1; fetch'"
 
 # User Apps
 "UserApps_TextEditor" = "$SystemApps_Terminal -e vim"

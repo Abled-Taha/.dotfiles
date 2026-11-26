@@ -107,6 +107,7 @@
 "none+r" = ["spawn_shell, quickshell msg runner toggle", "setkeymode, default"]
 "none+f" = ["spawn, $SystemApps_FileManager", "setkeymode, default"]
 "none+t" = ["spawn, $SystemApps_SystemMonitor", "setkeymode, default"]
+"none+i" = ["spawn, $SystemApps_SystemInformation", "setkeymode, default"]
 "none+escape" = "setkeymode, default"
 
 [bind.user_apps.conflict]
