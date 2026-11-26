@@ -1,31 +1,31 @@
 [var]
 # System Apps
-"SystemApps_Terminal" = "alacritty"
-"SystemApps_FileManager" = "$SystemApps_Terminal -e spf"
-"SystemApps_SystemMonitor" = "$SystemApps_Terminal -e btop"
-"SystemApps_SystemInformation" = "$SystemApps_Terminal -e bash -ic 'sleep 0.1; fetch'"
+SystemApps_Terminal = "alacritty"
+SystemApps_FileManager = "$SystemApps_Terminal -e spf"
+SystemApps_SystemMonitor = "$SystemApps_Terminal -e btop"
+SystemApps_SystemInformation = "$SystemApps_Terminal -e bash -ic 'sleep 0.1; fetch'"
 
 # User Apps
-"UserApps_TextEditor" = "$SystemApps_Terminal -e vim"
-"UserApps_IDE" = "$SystemApps_Terminal -e nvim"
-"UserApps_Browser" = "librewolf"
-"UserApps_TorBrowser" = "torbrowser-launcher"
-"UserApps_BrowserPrivate" = "$UserApps_Browser --private-window"
+UserApps_TextEditor = "$SystemApps_Terminal -e vim"
+UserApps_IDE = "$SystemApps_Terminal -e nvim"
+UserApps_Browser = "librewolf"
+UserApps_TorBrowser = "torbrowser-launcher"
+UserApps_BrowserPrivate = "$UserApps_Browser --private-window"
 
 # Quickshell
-"Menu" = "quickshell msg launcher toggle"
-"Help" = "quickshell msg keybinds toggle"
+Menu = "quickshell msg launcher toggle"
+Help = "quickshell msg keybinds toggle"
 
 # Paths
-"Paths_Projects" = "$HOME/Projects"
-"Paths_Dotfiles" = "$HOME/.dotfiles"
-"Paths_Projects_Ironbook" = "$Paths_Projects/programming/ironbook"
+Paths_Projects = "$HOME/Projects"
+Paths_Dotfiles = "$HOME/.dotfiles"
+Paths_Projects_Ironbook = "$Paths_Projects/programming/ironbook"
 
 # Games
-"UserApps_Games_Heroic" = "heroic"
-"UserApps_Games_Roblox" = "flatpak run org.vinegarhq.Sober"
-"UserApps_Games_CombatMaster" = "steam steam://rungameid/2281730"
-"UserApps_Games_Factorio" = "xdg-open heroic://launch?appName=fLaV5gBTDzQeEu56JAvHKJ&runner=sideload"
+UserApps_Games_Heroic = "heroic"
+UserApps_Games_Roblox = "flatpak run org.vinegarhq.Sober"
+UserApps_Games_CombatMaster = "steam steam://rungameid/2281730"
+UserApps_Games_Factorio = "xdg-open heroic://launch?appName=fLaV5gBTDzQeEu56JAvHKJ&runner=sideload"
 
 # Browser Apps: AI
 UserApps_BrowserApps_AI_Gemini = "https://gemini.google.com"
