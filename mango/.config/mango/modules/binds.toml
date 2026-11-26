@@ -120,6 +120,7 @@
 "none+h" = ["spawn, $UserApps_Games_Heroic", "setkeymode, default"]
 "none+r" = ["spawn, $UserApps_Games_Roblox", "setkeymode, default"]
 "none+c" = ["spawn, $UserApps_Games_CombatMaster", "setkeymode, default"]
+"none+f" = ["spawn, $UserApps_Games_Factorio", "setkeymode, default"]
 "none+escape" = "setkeymode, default"
 
 [bind.programming.conflict]

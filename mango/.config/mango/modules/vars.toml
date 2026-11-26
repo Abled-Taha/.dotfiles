@@ -24,6 +24,7 @@
 "UserApps_Games_Heroic" = "heroic"
 "UserApps_Games_Roblox" = "flatpak run org.vinegarhq.Sober"
 "UserApps_Games_CombatMaster" = "steam steam://rungameid/2281730"
+"UserApps_Games_Factorio" = "xdg-open heroic://launch?appName=fLaV5gBTDzQeEu56JAvHKJ&runner=sideload"
 
 # Browser Apps: AI
 UserApps_BrowserApps_AI_Gemini = "https://gemini.google.com"
